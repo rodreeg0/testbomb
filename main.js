@@ -14,6 +14,10 @@ class NFTToken {
         return this._contract;
     }
 
+    printAddress(){
+        console.log(this.userAccount);
+    }
+
     async getDesignContract() {
         const address = await this._designAddress;
         this._designContract = this._designContract || createContract(this._designAbi, address);
